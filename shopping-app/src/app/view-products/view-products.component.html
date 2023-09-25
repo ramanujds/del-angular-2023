@@ -1,0 +1,8 @@
+<h2>List of Products</h2>
+
+<h3 *ngIf="_productDataService.productList.length === 0" class="text-danger">No products available</h3>
+
+<div class="row">
+  <div class="col-md-4" *ngFor="let product of _productDataService.productList">
+    <app-product-card [product]="product"/>
+  </div>
