@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Product } from '../model/Product';
 import { ProductDataService } from '../product-data.service';
 import { Router } from '@angular/router';
+import { ProductApiService } from '../product-api.service';
 
 @Component({
   selector: 'app-add-product',
@@ -10,15 +11,20 @@ import { Router } from '@angular/router';
 })
 export class AddProductComponent {
 
-  constructor(private _productDataService:ProductDataService,
+  constructor(private _productApiService:ProductApiService,
     private _router:Router){
   }
 
 
 addProduct(product:Product){
-  this._productDataService.addProduct(product)
-  this._router.navigate(['/browse-products'])
+  this._productApiService.addProduct(product).subscribe(
+    response => {
+      console.log(response)
+      this._router.navigate(['/browse-products'])
+    }
+  )
 }
+  
 
   
 }

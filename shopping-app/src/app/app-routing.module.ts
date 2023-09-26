@@ -4,6 +4,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { ViewProductsComponent } from './view-products/view-products.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,9 @@ const routes: Routes = [
   },
   {
     path:'product/:id', component:ProductDetailsComponent
+  },
+  {
+    path:'update/:id', component:UpdateProductComponent
   },
   {
     path:'error', component:ErrorPageComponent

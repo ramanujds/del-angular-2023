@@ -13,6 +13,12 @@
       "price": 200000,
       "image": "https://www.apple.com/v/macbook-pro-16/f/images/overview/hero_endframe__f4gjv8k8xhqe_large.jpg",
       "description": "The Apple MacBook Pro 16 is the best MacBook ever made. It has a 16-inch OLED display, a 120Hz refresh rate"
+    },
+    {
+      "id": "5",
+      "name": "Oneplus 10",
+      "description": "Oneplus 10 Smartphone",
+      "price": 60000
     }
   ]
 }

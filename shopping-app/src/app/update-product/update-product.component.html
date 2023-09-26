@@ -1,0 +1,59 @@
+<h2>Update Product Details</h2>
+<form (submit)="updateProduct(productForm.value)" #productForm="ngForm">
+    <div class="form-group">
+        <label for="id">Product ID</label>
+        <input type="text" class="form-control" id="id" name="id" pattern="[0-9]+" 
+                required ngModel [value]="product?.id"
+                placeholder="Enter product id" 
+                #tId="ngModel">
+        <div *ngIf="tId.touched && tId.invalid">
+            <small *ngIf="tId.errors?.['required']" class="text-danger">
+                Product ID is required
+            </small>
+            <small *ngIf="tId.errors?.['pattern']" class="text-danger">
+                Please input numbers only
+            </small>
+        </div>
+    </div>
+        
+    <div class="form-group">
+        <label for="name">Product Name</label>
+        <input type="text" class="form-control" [value]="product?.name" id="name" name="name" pattern="[-a-zA-Z0-9 ]+" required ngModel placeholder="Enter product name" #tName="ngModel">
+        <div *ngIf="tName.touched && tName.invalid">
+            <small *ngIf="tName.errors?.['required']" class="text-danger">
+                Product Name is required
+            </small>
+            <small *ngIf="tName.errors?.['pattern']" class="text-danger">
+                Only characters, digits and spaces are allowed
+            </small>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="description">Product Description</label>
+        <input type="text" class="form-control" [value]="product?.description" id="description" name="description" minlength="10" required ngModel placeholder="Enter product description" #tDescription="ngModel">
+        <div *ngIf="tDescription.touched && tDescription.invalid">
+            <small *ngIf="tDescription.errors?.['required']" class="text-danger">
+                Product Description is required
+            </small>
+            <small *ngIf="tDescription.errors?.['minlength']" class="text-danger">
+                Description should have atleast 10 characters
+            </small>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="price">Product Price</label>
+        <input type="number" class="form-control" [value]="product?.price" id="price" name="price" pattern="[0-9]+" min="1"  ngModel required placeholder="Enter product price" #tPrice="ngModel">
+        <div *ngIf="tPrice.touched && tPrice.invalid">
+            <small *ngIf="tPrice.errors?.['required']" class="text-danger">
+                Price is required
+            </small>
+            <small *ngIf="tPrice.errors?.['min']" class="text-danger">
+                Invalid Price
+            </small>
+        </div>
+    </div>
+    <button type="submit" [disabled]="productForm.invalid" class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-secondary">Reset</button>
+</form>
+

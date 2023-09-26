@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     HeaderComponent,
     FooterComponent,
     ErrorPageComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    UpdateProductComponent
   ],
   imports: [
     BrowserModule,
