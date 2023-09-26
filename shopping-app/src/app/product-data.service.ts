@@ -47,6 +47,10 @@ export class ProductDataService {
 
   
 
+  findProductById(id:any){
+    const product = this.productList.find(p=>p.id==id);
+    return product;
+  }
 
   
 }

@@ -1,0 +1,11 @@
+<h4>Product Deatils</h4>
+<div *ngIf="!product">
+    <p>No Product found with the given ID</p>   
+</div>
+<div *ngIf="product">
+    <p>Product ID: {{product.id}}</p>
+    <p>Product Name: {{product.name}}</p>
+    <p>Product Description: {{product.description}}</p>
+    <p>Product Price: {{product.price}}</p>
+    <img src="{{product.image}}" alt="Product Image" width="200" height="200">
+</div>

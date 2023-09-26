@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "iPhone 15 Pro",
+      "price": 150000,
+      "image": "https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iphone-13-pro-family-design_09142021_big.jpg.large.jpg",
+      "description": "The iPhone 15 Pro is the best iPhone ever made. It has a 6.1-inch OLED display, a 120Hz refresh rate, and a 48-megapixel camera"
+    },
+    {
+      "id": 2,
+      "name": "iPhone 15 Pro Max",
+      "price": 170000,
+      "image": "https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iphone-13-pro-family-design_09142021_big.jpg.large.jpg",
+      "description": "The iPhone 15 Pro Max is the best iPhone ever made. It has a 6.7-inch OLED display, a 120Hz refresh rate, and a 48-megapixel camera"
+    },
+    {
+      "id": 3,
+      "name": "Samsung Galaxy S23 Ultra",
+      "price": 120000,
+      "image": "https://www.samsung.com/us/mobile/galaxy-s21-5g/_next/static/images/galaxy-s21-5g/phone_kv.jpg",
+      "description": "The Samsung Galaxy S23 Ultra is the best Samsung phone ever made. It has a 6.8-inch OLED display, a 120Hz refresh rate, and a 48-megapixel camera"
+    },
+    {
+      "id": 4,
+      "name": "Apple MacBook Pro 16",
+      "price": 200000,
+      "image": "https://www.apple.com/v/macbook-pro-16/f/images/overview/hero_endframe__f4gjv8k8xhqe_large.jpg",
+      "description": "The Apple MacBook Pro 16 is the best MacBook ever made. It has a 16-inch OLED display, a 120Hz refresh rate"
+    }
+  ]
+}

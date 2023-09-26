@@ -1,6 +1,4 @@
 
-<p>Welcome to {{title}}</p>
-
 <!-- <div>
   <label>Input a title </label>
   <input type="text" [(ngModel)]="title" />
@@ -12,11 +10,14 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-4">
-      <app-add-product></app-add-product>
-    </div>
-    <div class="col-8">
-      <app-view-products></app-view-products>
-    </div>
+    <header class="col-md-12">
+      <app-header></app-header>
+    </header>
+    <main class="col-md-12">
+      <router-outlet/>
+    </main>
+    <footer class="col-md-12">
+      <app-footer></app-footer>
+    </footer>
   </div>
 </div>
