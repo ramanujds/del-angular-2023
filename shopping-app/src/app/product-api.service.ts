@@ -12,10 +12,10 @@ export class ProductApiService {
 
   constructor(private _httpClient:HttpClient) { }
 
-  addProduct(product: Product) {
-
+  addProduct(product: Product):Observable<Product> {
+    return this._httpClient.post(this.productApiUrl,product)
   }
-  
+
   fetchAllProducts():Observable<Array<Product>>{
     return this._httpClient.get<Array<Product>>(this.productApiUrl);
   }
@@ -24,12 +24,12 @@ export class ProductApiService {
     return this._httpClient.get(this.productApiUrl+"/"+id)
   }
 
-  updateProduct(product:Product){
-
+  updateProduct(product:Product):Observable<Product>{
+    return this._httpClient.put(this.productApiUrl+"/"+product.id,product)
   }
 
   deleteProduct(id:any){
-
+    return this._httpClient.delete(this.productApiUrl+"/"+id)
   }
 
 }
