@@ -5,10 +5,12 @@ import { ViewProductsComponent } from './view-products/view-products.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
+import { appRouteGuard } from './app-route.guard';
+import { appDeactivateRouteGuard } from './app-deactivate-route.guard';
 
 const routes: Routes = [
   {
-    path:'add-product', component:AddProductComponent
+    path:'add-product', component:AddProductComponent, canActivate:[appRouteGuard]
   },
   {
     path:'browse-products', component:ViewProductsComponent
@@ -17,7 +19,7 @@ const routes: Routes = [
     path:'product/:id', component:ProductDetailsComponent
   },
   {
-    path:'update/:id', component:UpdateProductComponent
+    path:'update/:id', component:UpdateProductComponent, canDeactivate:[appDeactivateRouteGuard]
   },
   {
     path:'error', component:ErrorPageComponent

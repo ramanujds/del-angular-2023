@@ -30,6 +30,8 @@ export class UpdateProductComponent implements OnInit {
 
   updateProduct(product: Product) {
 
+    console.log(product)
+    
   }
 
 }
